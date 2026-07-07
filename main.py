@@ -1,4 +1,4 @@
-import streamlit as pd
+import streamlit as st
 import pandas as pd
 
 st.set_page_config(page_title="Global MBTI Dashboard", page_icon="🌍", layout="wide")
@@ -23,7 +23,7 @@ try:
     st.dataframe(df.head(10), use_container_width=True)
     
     # 간단한 요약 통계
-    st.subheader("📈 데이터 요약 요약")
+    st.subheader("📈 데이터 요약")
     col1, col2, col3 = st.columns(3)
     col1.metric("총 대상 국가 수", f"{len(df)} 개국")
     col2.metric("가장 데이터가 많은 국가", df.iloc[0]['Country'])
